@@ -81,7 +81,12 @@ class PriceJpaEntityControllerTest {
         .when()
         .get("/api/prices")
         .then()
-        .statusCode(HttpStatus.NOT_FOUND.value());
+        .statusCode(HttpStatus.NOT_FOUND.value())
+        .contentType(ContentType.JSON)
+        .body("error_details", equalTo("PriceNotFoundException"))
+        .body("error_message", containsString("No price found for product"))
+        .body("result", equalTo(""))
+        .body("timestamp", notNullValue());
   }
 
   @Test

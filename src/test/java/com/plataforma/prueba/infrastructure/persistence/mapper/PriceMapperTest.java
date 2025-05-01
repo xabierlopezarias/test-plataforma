@@ -26,14 +26,15 @@ class PriceMapperTest {
     Price domain = priceMapper.toPriceDto(entity);
 
     assertNotNull(domain);
-    assertEquals(entity.getId(), domain.id());
-    assertEquals(entity.getProductId(), domain.productId());
-    assertEquals(entity.getBrand().getId(), domain.brand().id());
-    assertEquals(entity.getBrand().getName(), domain.brand().name());
-    assertEquals(entity.getPrice(), domain.price());
-    assertEquals(entity.getCurrency(), domain.currency());
-    assertEquals(entity.getStartDate(), domain.startDate());
-    assertEquals(entity.getEndDate(), domain.endDate());
+    assertEquals(entity.getId(), domain.getId());
+    assertEquals(entity.getProductId(), domain.getProductId());
+    assertEquals(entity.getBrand().getId(), domain.getBrand().id());
+    assertEquals(entity.getBrand().getName(), domain.getBrand().name());
+    assertEquals(entity.getPrice(), domain.getPrice());
+    assertEquals(entity.getPriceList(), domain.getPriceList());
+    assertEquals(entity.getCurrency(), domain.getCurrency());
+    assertEquals(entity.getStartDate(), domain.getStartDate());
+    assertEquals(entity.getEndDate(), domain.getEndDate());
   }
 
 
