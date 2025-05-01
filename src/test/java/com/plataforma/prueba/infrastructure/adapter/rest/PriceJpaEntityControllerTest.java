@@ -39,18 +39,18 @@ class PriceJpaEntityControllerTest {
 
   static Stream<Arguments> priceTestCases() {
     return Stream.of(
-        Arguments.of(LocalDateTime.of(2020, 6, 14, 10, 0), 1, 35.50,"EUR"),
-        Arguments.of(LocalDateTime.of(2020, 6, 14, 16, 0), 2, 25.45,"EUR"),
-        Arguments.of(LocalDateTime.of(2020, 6, 14, 21, 0), 1, 35.50,"EUR"),
-        Arguments.of(LocalDateTime.of(2020, 6, 15, 10, 0), 3, 30.50,"EUR"),
-        Arguments.of(LocalDateTime.of(2020, 6, 16, 21, 0), 4, 38.95,"EUR")
+        Arguments.of(LocalDateTime.of(2020, 6, 14, 10, 0), 1, 35.50),
+        Arguments.of(LocalDateTime.of(2020, 6, 14, 16, 0), 2, 25.45),
+        Arguments.of(LocalDateTime.of(2020, 6, 14, 21, 0), 1, 35.50),
+        Arguments.of(LocalDateTime.of(2020, 6, 15, 10, 0), 3, 30.50),
+        Arguments.of(LocalDateTime.of(2020, 6, 16, 21, 0), 4, 38.95)
     );
   }
 
   @ParameterizedTest
   @MethodSource("priceTestCases")
   void should_return_correct_price_for_specific_date(
-      LocalDateTime date, int expectedPriceList, double expectedPrice,String currency) {
+      LocalDateTime date, int expectedPriceList, double expectedPrice) {
 
     given()
         .param("brandId", VALID_BRAND_ID)
@@ -65,7 +65,6 @@ class PriceJpaEntityControllerTest {
         .body("productId", equalTo(VALID_PRODUCT_ID))
         .body("priceList", equalTo(expectedPriceList))
         .body("price", equalTo((float)expectedPrice))
-        .body("currency", equalTo(currency))
         .body("startDate", notNullValue())
         .body("endDate", notNullValue());
   }
@@ -147,12 +146,10 @@ class PriceJpaEntityControllerTest {
         .body("$", hasKey("startDate"))
         .body("$", hasKey("endDate"))
         .body("$", hasKey("price"))
-        .body("$", hasKey("currency"))
         .body("brandId", isA(Integer.class))
         .body("productId", isA(Integer.class))
         .body("priceList", isA(Integer.class))
-        .body("price", isA(Float.class))
-        .body("currency", isA(String.class));
+        .body("price", isA(Float.class));
   }
 
 }

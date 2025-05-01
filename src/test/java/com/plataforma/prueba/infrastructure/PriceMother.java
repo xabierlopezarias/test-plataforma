@@ -48,7 +48,6 @@ public class PriceMother {
         2001L,
         1L,
         new BigDecimal("19.99"),
-        "EUR",
         LocalDateTime.of(2023, 11, 1, 0, 0),
         LocalDateTime.of(2023, 11, 30, 23, 59)
     );
