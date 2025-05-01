@@ -1,4 +1,4 @@
-package com.plataforma.prueba.infraestructure.adapter.rest;
+package com.plataforma.prueba.infrastructure.adapter.rest;
 
 import com.plataforma.prueba.application.PriceQuery;
 import com.plataforma.prueba.application.PriceResponse;

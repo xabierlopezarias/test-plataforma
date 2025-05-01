@@ -1,4 +1,4 @@
-package com.plataforma.prueba.infraestructure.persistence.entity;
+package com.plataforma.prueba.infrastructure.persistence.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -44,7 +44,7 @@ public class PriceJpaEntity {
     private BigDecimal price;
 
     @Column(name = "CURR")
-    private String curr;
+    private String currency;
 
 
 }

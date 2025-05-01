@@ -7,7 +7,7 @@ import static org.mockito.Mockito.*;
 import com.plataforma.prueba.domain.exception.PriceNotFoundException;
 import com.plataforma.prueba.domain.model.Price;
 import com.plataforma.prueba.domain.repository.PriceRepository;
-import com.plataforma.prueba.infraestructure.PriceMother;
+import com.plataforma.prueba.infrastructure.PriceMother;
 import java.time.LocalDateTime;
 import java.util.Optional;
 

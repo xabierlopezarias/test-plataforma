@@ -12,7 +12,7 @@ public record Price(
     Long productId,
     Integer priority,
     BigDecimal price,
-    String curr
+    String currency
 ) {
 }
 

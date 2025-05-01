@@ -1,8 +1,8 @@
-package com.plataforma.prueba.infraestructure.persistence.repository;
+package com.plataforma.prueba.infrastructure.persistence.repository;
 
 import java.time.LocalDateTime;
 
-import com.plataforma.prueba.infraestructure.persistence.entity.PriceJpaEntity;
+import com.plataforma.prueba.infrastructure.persistence.entity.PriceJpaEntity;
 import java.util.Optional;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;

@@ -1,9 +1,9 @@
-package com.plataforma.prueba.infraestructure;
+package com.plataforma.prueba.infrastructure;
 
 import com.plataforma.prueba.domain.model.Price;
 import com.plataforma.prueba.domain.repository.PriceRepository;
-import com.plataforma.prueba.infraestructure.persistence.mapper.PriceMapper;
-import com.plataforma.prueba.infraestructure.persistence.repository.PriceH2Repository;
+import com.plataforma.prueba.infrastructure.persistence.mapper.PriceMapper;
+import com.plataforma.prueba.infrastructure.persistence.repository.PriceH2Repository;
 import java.time.LocalDateTime;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,10 +1,10 @@
-package com.plataforma.prueba.infraestructure;
+package com.plataforma.prueba.infrastructure;
 
 import com.plataforma.prueba.application.PriceResponse;
 import com.plataforma.prueba.domain.model.Brand;
 import com.plataforma.prueba.domain.model.Price;
-import com.plataforma.prueba.infraestructure.persistence.entity.BrandJpaEntity;
-import com.plataforma.prueba.infraestructure.persistence.entity.PriceJpaEntity;
+import com.plataforma.prueba.infrastructure.persistence.entity.BrandJpaEntity;
+import com.plataforma.prueba.infrastructure.persistence.entity.PriceJpaEntity;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
@@ -48,6 +48,7 @@ public class PriceMother {
         2001L,
         1L,
         new BigDecimal("19.99"),
+        "EUR",
         LocalDateTime.of(2023, 11, 1, 0, 0),
         LocalDateTime.of(2023, 11, 30, 23, 59)
     );

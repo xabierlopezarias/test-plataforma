@@ -1,12 +1,12 @@
-package com.plataforma.prueba.infraestructure;
+package com.plataforma.prueba.infrastructure;
 
 import static org.mockito.Mockito.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 import com.plataforma.prueba.domain.model.Price;
-import com.plataforma.prueba.infraestructure.persistence.entity.PriceJpaEntity;
-import com.plataforma.prueba.infraestructure.persistence.mapper.PriceMapper;
-import com.plataforma.prueba.infraestructure.persistence.repository.PriceH2Repository;
+import com.plataforma.prueba.infrastructure.persistence.entity.PriceJpaEntity;
+import com.plataforma.prueba.infrastructure.persistence.mapper.PriceMapper;
+import com.plataforma.prueba.infrastructure.persistence.repository.PriceH2Repository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;

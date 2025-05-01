@@ -1,4 +1,5 @@
-package com.plataforma.prueba.infraestructure.adapter.rest;
+package com.plataforma.prueba.infrastructure.adapter.rest;
+
 
 import jakarta.validation.constraints.NotEmpty;
 import java.time.LocalDateTime;

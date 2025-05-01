@@ -1,11 +1,11 @@
-package com.plataforma.prueba.infraestructure.persistence.mapper;
+package com.plataforma.prueba.infrastructure.persistence.mapper;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import com.plataforma.prueba.domain.model.Price;
-import com.plataforma.prueba.infraestructure.PriceMother;
-import com.plataforma.prueba.infraestructure.persistence.entity.PriceJpaEntity;
+import com.plataforma.prueba.infrastructure.PriceMother;
+import com.plataforma.prueba.infrastructure.persistence.entity.PriceJpaEntity;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 import org.mapstruct.factory.Mappers;
@@ -31,6 +31,7 @@ class PriceMapperTest {
     assertEquals(entity.getBrand().getId(), domain.brand().id());
     assertEquals(entity.getBrand().getName(), domain.brand().name());
     assertEquals(entity.getPrice(), domain.price());
+    assertEquals(entity.getCurrency(), domain.currency());
     assertEquals(entity.getStartDate(), domain.startDate());
     assertEquals(entity.getEndDate(), domain.endDate());
   }

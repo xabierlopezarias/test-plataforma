@@ -1,4 +1,4 @@
-package com.plataforma.prueba.infraestructure.persistence.entity;
+package com.plataforma.prueba.infrastructure.persistence.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

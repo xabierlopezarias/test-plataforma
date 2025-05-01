@@ -26,7 +26,6 @@ public class DefaultExceptionHandler extends ResponseEntityExceptionHandler {
     }
 
     @ExceptionHandler(PriceNotFoundException.class)
-    @ResponseStatus(HttpStatus.NOT_FOUND)
     protected ResponseEntity<Object> handleNotFoundExceptions(PriceNotFoundException ex) {
         return buildResponseEntity(ex, HttpStatus.NOT_FOUND);
     }
