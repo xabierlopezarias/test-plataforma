@@ -39,7 +39,6 @@ class PriceJpaEntityControllerTest {
 
   static Stream<Arguments> priceTestCases() {
     return Stream.of(
-        // fecha, priceList, precio, moneda
         Arguments.of(LocalDateTime.of(2020, 6, 14, 10, 0), 1, 35.50,"EUR"),
         Arguments.of(LocalDateTime.of(2020, 6, 14, 16, 0), 2, 25.45,"EUR"),
         Arguments.of(LocalDateTime.of(2020, 6, 14, 21, 0), 1, 35.50,"EUR"),
@@ -87,7 +86,6 @@ class PriceJpaEntityControllerTest {
 
   @Test
   void should_get_not_found_when_call_method_without_all_parameters() {
-    // Sin brandId (obligatorio)
     given()
         .param("productId", VALID_PRODUCT_ID)
         .param("date", LocalDateTime.now().format(FORMATTER))
