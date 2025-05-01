@@ -3,8 +3,8 @@ Este proyecto es una API para la gestión de precios de productos, desarrollada 
 
 ### Capas principales
 - **Dominio**: Núcleo de la aplicación, contiene:
-    - **Entidades**: (marcas) y (precios) definidas como objetos inmutables `Brand``Price`
-    - **Excepciones**: para gestionar errores específicos del dominio `PriceNotFoundException`
+    - **Entidades**: `Brand` (marcas) definida como record inmutable y `Price` (precios) con constructor que implementa validaciones siguiendo principios DDD.
+    - **Excepciones**: para gestionar errores específicos del dominio.
     - **Repositorios**: Interfaces como que definen contratos para acceder a datos sin acoplarse a tecnologías específicas `PriceRepository`
 
 - **Aplicación**: Orquesta los casos de uso mediante:
